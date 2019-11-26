@@ -1,0 +1,13 @@
+08:24:01.415164 IP6 fe80::bce5:b8ff:fe77:b33f.5353 > ff02::fb.5353: 0 [2q] PTR (QM)? _ipps._tcp.local. PTR (QM)? _ipp._tcp.local. (45)
+08:24:01.853164 LLDP, length 61
+08:24:01.900490 be:e5:b8:77:b3:3f > ff:ff:ff:ff:ff:ff, ethertype Unknown (0x8942), length 83: 
+	0x0000:  2000 0604 0002 0000 0207 0400 0000 0000  ................
+	0x0010:  0e04 0302 0002 0602 0078 fe0c 0026 e100  .........x...&..
+	0x0020:  0000 0000 0000 000e 1808 0458 8cb3 9ed4  ...........X....
+	0x0030:  097c e601 01fe 0c00 26e1 0100 0001 6ea8  .|......&.....n.
+	0x0040:  86e0 3a00 00                             ..:..
+08:24:01.975967 IP6 fe80::fca9:a9ff:fefd:da3d > ff02::2: ICMP6, router solicitation, length 16
+08:24:02.148558 IP6 fe80::bc33:aaff:fee7:46e1 > ff02::2: ICMP6, router solicitation, length 16
+08:24:02.148543 IP6 fe80::bce5:b8ff:fe77:b33f > ff02::2: ICMP6, router solicitation, length 16
+08:24:02.213712 IP6 fe80::bce5:b8ff:fe77:b33f.5353 > ff02::fb.5353: 0*- [0q] 2/0/0 (Cache flush) PTR ubuntu.local., (Cache flush) AAAA fe80::bce5:b8ff:fe77:b33f (138)
+08:24:02.460341 IP6 fe80::b4bd:20ff:fe6a:862c > ff02::2: ICMP6, router solicitation, length 16
