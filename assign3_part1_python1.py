@@ -26,15 +26,15 @@ def myNetwork():
                    link=TCLink)
 
     info( '*** Adding controller\n' )
-    #c0=net.addController(name='c0',
-     #                 controller=Controller,
-      #                protocol='tcp',
-    #                  port=6633)
+    c0=net.addController(name='c0',
+                      controller=Controller,
+                      protocol='tcp',
+                      port=6633)
 
     #print("Going to sleep for 10 seconds")
     #time.sleep(10)
-    c0 = RemoteController( 'c0', protocol='tcp', port= 6653) # this is for external Floodlight controller
-    net.addController(c0)
+    #c0 = RemoteController( 'c0', protocol='tcp', port= 6653) # this is for external Floodlight controller
+    #net.addController(c0)
 
     info( '*** Add switches\n')
     s1 = net.addSwitch('s1', cls=OVSKernelSwitch)
@@ -142,7 +142,7 @@ def myNetwork():
     for h in newHosts:
     #ping -w option
     #This option sets the required running Time window value in second
-        h.cmdPrint('ping -w 20', server.IP(),
+        h.cmdPrint('ping -w 80', server.IP(), # CHANGED: -w 20 => -w 40
                  '>', outfiles[ h ],
                  '2>', errfiles[ h ]
                  )
