@@ -142,18 +142,20 @@ def myNetwork():
     for h in newHosts:
     #ping -w option
     #This option sets the required running Time window value in second
-        h.cmdPrint('ping -w 80', server.IP(), # CHANGED: -w 20 => -w 40
-                 '>', outfiles[ h ],
-                 '2>', errfiles[ h ]
-                 )
+        
+        # Commented out call to 'ping' utility
+        #h.cmdPrint('ping -w 80', server.IP(), # CHANGED: -w 20 => -w 40
+        #         '>', outfiles[ h ],
+        #         '2>', errfiles[ h ]
+        #         )
 
-        #server.cmdPrint('iperf -s -u -p 5566 -i 10',
-     #                  '>', outfiles[ h ],
-     #                  '2>', errfiles[ h ],
-     #                  '&' )
-    # bandwidth=6
-    # running_time=100
-    # h.cmd('iperf -c %s -u -b %sM -p 5566 -t %s' % (server.IP(),bandwidth, running_time))
+        server.cmdPrint('iperf -s -u -p 5566 -i 10',
+                       '>', outfiles[ h ],
+                       '2>', errfiles[ h ],
+                       '&' )
+        bandwidth=6
+        running_time=100
+        h.cmd('iperf -c %s -u -b %sM -p 5566 -t %s' % (server.IP(),bandwidth, running_time))
 
     #CLI(net)
     net.stop()
